@@ -1,0 +1,108 @@
+page-last-activity {
+    .calendar{  
+        .activity_date{
+            color: color($colors,light);
+            display: inline-block;
+            .date{
+                background: color($colors,thirdcolor);
+                height: 32px;
+                line-height: 32px;
+                border-radius: 20px;
+                display: inline-block;
+                padding: 0 15px;
+                min-width: 140px;
+                float: left;
+                margin-right: 15px;
+            }
+            .button-ios{
+                background: color($colors,thirdcolor);
+                color: color($colors,light);
+                width: 32px;
+                height: 32px;
+                line-height: 32px;
+                border-radius: 50%;
+                font-size: 10px;
+            }
+        }
+        ion-calendar{
+            background: color($colors,primary);
+            width: calc(100% - 32px);
+            margin-top: 13px;
+            .week-toolbar{
+                min-height: 44px;
+                .week-title{
+                    color: color($colors,light);
+                }
+            }
+            .title{
+                width: 200px;
+                margin: 0 auto;
+                .text {
+                    line-height: 42px;
+                }
+                .button-ios{
+                   color: color($colors,light);
+                }
+            }
+            .days {
+                height: 25px;
+                .days-btn {
+                   height: 25px;
+                   border-radius: 0;
+                &.on-selected{
+                    background: color($colors,thirdcolor);
+                }
+                   p{
+                       font-size: 1.1em;
+                   }
+                }
+            }
+        } 
+    }
+   .last_activity{
+        .item-ios{
+        &:last-child{
+            .item-inner{
+               border: none !important;
+            }
+        }
+            .item-inner{
+                border-bottom: 1px solid rgba(color($colors,thirdcolor),.6) !important;
+                .label-ios{
+                    margin: 15px 0;
+                    h2{
+                        color: color($colors,thirdcolor);
+                        span{
+                            float: right;
+                            color: color($colors,secondary);
+                        }
+                    }
+                    ion-col{
+                        padding-left: 0;
+                        p{
+                            color: darken(color($colors,thirdcolor), 20%);
+                        }
+                        ion-icon{
+                            padding-right: 5px;
+                        }
+                    }
+                }
+            }
+            [item-start]{
+                width: 45px;
+                height: 45px;
+                line-height: 55px;
+                border-radius: 50%;
+                background: color($colors,thirdcolor);
+                display: inline-block;
+                img{
+                    height: 24px;
+                    object-fit: contain;
+                }
+            }
+        }
+    }
+    .footer{
+         border-top: 1px solid color($colors,thirdcolor);
+    }
+}

@@ -1,0 +1,50 @@
+@import "../assets/animate/animate.scss";
+.animateApp{
+    .logo{
+       @include zoomIn();     
+    }
+    .social_icon{
+        ion-row{
+          ion-col{
+            &:nth-child(1){
+            @include zoomIn(
+               $delay: .8s
+            );
+            } 
+            &:nth-child(2){
+            @include zoomIn(
+               $delay: 1.2s
+            );
+            } 
+            &:nth-child(3){
+            @include zoomIn(
+               $delay: 1.4s
+            );
+            }  
+          }
+        }
+    }
+    .last_activity{
+        .item-ios{
+            &:nth-child(2n+1){
+            @include slideInLeft($duration: 1.4s);   
+            }
+            &:nth-child(2n){
+            @include slideInRight($duration: 1.4s);   
+            }   
+        }
+    }
+    .main_item{
+        img{
+          @include flipInX(
+              $duration: 1.4s
+          ); 
+        } 
+    }
+    .progress_bar{
+        round-progress{
+           @include rotateIn();  
+        }
+    } 
+}
+    

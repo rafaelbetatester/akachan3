@@ -1,0 +1,130 @@
+page-signups1 {
+    .toolbar-background{
+       // position: relative;
+        background-image: url('../assets/imgs/splashbg.png') no-repeat transparent;
+      //  background-size: cover;
+      background-color: #2D8FFF;
+     }
+
+     .cat-rows {
+        justify-content: space-around;
+        margin-bottom: 10px;
+        padding: 0 5px;
+
+        .cat-box {
+            
+            background-color: rgb(255, 255, 255);
+            border-radius: 5px;
+            box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.103);
+            margin: 5px;
+            max-width: 300px;
+            min-height: 15vh;
+            padding: 5px;
+            text-align: center;
+            height: auto;
+    
+            .catimgholder{
+                padding-top: 10%;
+                
+                img{
+                    max-height: 48px;
+                    height: 50px;
+                    max-width: 40px;
+                }
+               
+            }
+            p{
+                margin: 0;
+                color: #95C6FF;
+            }
+    
+          }
+      }
+
+      .checkbox{
+        border-color:#95C6FF!important;
+      }
+
+      .toolbar-title{
+          color: #ffff !important;
+      }
+
+      .nxtstpbtn{
+            border-radius: 25px;
+            color: rgb(255, 255, 255)!important;
+            font-size: 1.5em;
+        height: 50px;
+        background-color: #2D8FFF;
+    
+        
+      }
+
+      .detailsholder{
+          h1{
+            padding-bottom: 20px;
+            color: #2D8FFF;
+
+          }
+        ion-item{
+            border-radius: 25px !important;
+            margin-left: -0.1rem;
+          padding-left: 30px !important;
+          font-size: 1.2em;
+          margin-bottom: 10px;
+          border-bottom: 0px !important;
+          box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.103) !important;
+          height: 20px;
+    
+          ion-icon{
+              color: #95C6FF!important;
+          }
+        }
+        ion-input{
+            background-color: #ffffff;
+            width: 90vw;
+           
+            margin: 10px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+           
+    
+             ::-webkit-input-placeholder {
+    
+                 text-align: center;
+                 color: #95C6FF;
+             
+              }
+             
+              :-moz-placeholder { /* Firefox 18- */
+             
+                 text-align: center;
+             
+              }
+             
+              ::-moz-placeholder {  /* Firefox 19+ */
+             
+                 text-align: center;
+             
+              }
+             
+              :-ms-input-placeholder {  
+             
+                 text-align: center;
+             
+             }
+        }
+    }
+
+    .fillbanner
+    {
+        background-color: #2D8FFF;
+        img{
+            width: 100px;
+            height:60vh;
+        }
+    }
+
+    ion-slides {
+        height: 500px;
+     }
+}

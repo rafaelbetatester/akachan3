@@ -1,0 +1,97 @@
+<ion-header>
+
+  <ion-navbar>
+        <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title>activity</ion-title>
+        <ion-buttons end>  
+            <button ion-button icon-only (click)="searchInput=!searchInput">
+                <ion-icon name="search"></ion-icon>
+            </button> 
+        </ion-buttons>
+        <ion-searchbar *ngIf="searchInput" placeholder='' no-margin></ion-searchbar>
+    </ion-navbar>
+  
+</ion-header>
+
+
+<ion-content>
+    <div text-center padding-top>
+        <span class="activity_type" item-start text-center>
+           <img src="assets/img/01.png">
+        </span>
+    </div>
+    <div class="progress_bar" text-center>
+        <div class="current" [ngStyle]="global.getOverlayStyle()">
+           <p no-margin>{{ global.current_min }}<span>Minutes</span></p>
+        </div>
+        <round-progress  class="medium_progress"
+        [current]="global.current_min"
+        [max]="global.max_min"
+        [stroke]="global.stroke"
+        [radius]="global.medium_radius"
+        [semicircle]="global.semicircle"
+        [rounded]="global.rounded"
+        [responsive]="global.responsive"
+        [clockwise]="global.clockwise"
+        [color]="global.gradient ? 'url(#global.gradient)' : global.color"
+        [background]="global.background"
+        [duration]="global.duration"
+        [animation]="global.animation"
+        [animationDelay]="global.animationDelay"></round-progress>
+    </div>
+    <ion-row>
+        <ion-col col-6>
+          <div class="progress_bar" text-center>
+            <div class="current" [ngStyle]="global.getOverlayStyle()">
+                <p no-margin>{{ global.current_cal }}<span>Cal</span></p>
+            </div>
+            <round-progress  class="small_progress"
+            [current]="global.current_cal"
+            [max]="global.max_cal"
+            [stroke]="global.stroke"
+            [radius]="global.small_radius"
+            [semicircle]="global.semicircle"
+            [rounded]="global.rounded"
+            [responsive]="global.responsive"
+            [clockwise]="global.clockwise"
+            [color]="global.gradient ? 'url(#global.gradient)' : global.color"
+            [background]="global.background"
+            [duration]="global.duration"
+            [animation]="global.animation"
+            [animationDelay]="global.animationDelay"></round-progress>
+          </div>
+        </ion-col>
+        <ion-col col-6>
+          <div class="progress_bar" text-center>
+            <div class="current" [ngStyle]="global.getOverlayStyle()">
+                <p no-margin>{{ global.current_km }}<span>Km</span></p>
+            </div>
+            <round-progress class="small_progress"
+            [current]="global.current_km"
+            [max]="global.max_km"
+            [stroke]="global.stroke"
+            [radius]="global.small_radius"
+            [semicircle]="global.semicircle"
+            [rounded]="global.rounded"
+            [responsive]="global.responsive"
+            [clockwise]="global.clockwise"
+            [color]="global.gradient ? 'url(#global.gradient)' : global.color"
+            [background]="global.background"
+            [duration]="global.duration"
+            [animation]="global.animation"
+            [animationDelay]="global.animationDelay"></round-progress>
+          </div>
+        </ion-col>
+    </ion-row>
+    <div  class="activity_list" text-center margin-top>
+        <h3>Activity</h3>
+        <ion-scroll scrollX="true">
+            <div class="activity_item" *ngFor="let item of list" [ngClass]="{'activeItem':item.active==true}">
+                <i class="{{item.icon}}" padding-vertical></i>
+                <p no-margin>{{item.time}}<span>{{item.cal}}</span></p>
+            </div>
+        </ion-scroll>
+    </div>
+</ion-content>

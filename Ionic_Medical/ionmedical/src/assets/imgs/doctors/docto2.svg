@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 100 100">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #d5d5d5;
+      }
+
+      .cls-2 {
+        clip-path: url(#clip-path);
+      }
+
+      .cls-3 {
+        fill: url(#pattern);
+      }
+    </style>
+    <clipPath id="clip-path">
+      <circle id="Mask" class="cls-1" cx="50" cy="50" r="50"/>
+    </clipPath>
+    <pattern id="pattern" preserveAspectRatio="none" width="100%" height="100%" viewBox="0 0 2000 1335">
+      <image width="2000" height="1335" xlink:href="docto2-image.png"/>
+    </pattern>
+  </defs>
+  <g id="docto2" class="cls-2">
+    <rect id="pixta_19279319_M" class="cls-3" width="299.286" height="200" transform="translate(-129.857 -0.857)"/>
+  </g>
+</svg>

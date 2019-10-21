@@ -1,0 +1,167 @@
+
+<ion-header no-border>
+
+  <ion-navbar>
+   <ion-title text-center >Who are you</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <div>
+      <img src="./assets/imgs/navbar.svg" alt="">
+  </div>
+  <div class="icontent">
+        <ion-slides #slides>
+            <ion-slide>
+      <ion-grid class="catgrid">
+          <ion-row class="cat-rows">
+              <ion-col class="cat-box"  (click)="goPhones()">
+                  <div class="catimgholder" text-center>
+                      <img src="./assets/imgs/doctor.svg" alt="">
+                  </div>
+                  <ion-checkbox  [(ngModel)]="doctor"></ion-checkbox>
+                  <p>I'm aIDoctor</p>
+                </ion-col>
+                <ion-col class="cat-box"  (click)="goPhones()">
+                    <div class="catimgholder" text-center>
+                        <img src="./assets/imgs/hospital.svg" alt="">
+                    </div>
+                    <ion-checkbox  [(ngModel)]="hospital"></ion-checkbox>
+                    <p >I'm a Hospital</p>
+                  </ion-col>
+          </ion-row>
+
+          <ion-row class="cat-rows">
+              <ion-col class="cat-box"  (click)="goPhones()">
+                  <div class="catimgholder" text-center>
+                      <img src="./assets/imgs/pills.svg" alt="">
+                  </div>
+                  <ion-checkbox  [(ngModel)]="doctor"></ion-checkbox>
+                  <p>I'm a Pharmacy</p>
+                </ion-col>
+                <ion-col class="cat-box"  (click)="goPhones()">
+                    <div class="catimgholder" text-center>
+                        <img src="./assets/imgs/patient.svg" alt="">
+                    </div>
+                    <ion-checkbox  [(ngModel)]="patient"></ion-checkbox>
+                    <p >I'm a Patient</p>
+                  </ion-col>
+          </ion-row>
+
+          <ion-row class="cat-rows">
+              <ion-col class="cat-box"  (click)="goPhones()">
+                  <div class="catimgholder" text-center>
+                      <img src="./assets/imgs/clinic.svg" alt="">
+                  </div>
+                  <ion-checkbox  [(ngModel)]="doctor"></ion-checkbox>
+                  <p>I'm a Clinic</p>
+                </ion-col>
+                <ion-col class="cat-box"  (click)="goPhones()">
+                    <div class="catimgholder" text-center>
+                        <img src="./assets/imgs/chemistry.svg" alt="">
+                    </div>
+                    <ion-checkbox  [(ngModel)]="patient"></ion-checkbox>
+                    <p >I'm a Laboratory</p>
+                  </ion-col>
+          </ion-row>
+      </ion-grid>
+      <div padding text-center>
+            <button  class="nxtstpbtn" color="light" ion-button block (click)="nextSlide()">NEXT STEP</button>
+      </div>
+    </ion-slide>
+    <ion-slide>
+            <div class="detailsholder" text-center padding>
+                    <h1>Account</h1>
+
+                    <ion-item>
+                    <span  item-left><ion-icon name="ios-person-outline"></ion-icon> </span>
+                    <ion-input class="username" placeholder="USERNAME"> </ion-input>
+                  </ion-item>
+
+                  <ion-item>
+                        <span  item-left><ion-icon name="ios-mail-outline"></ion-icon> </span>
+                        <ion-input class="username" placeholder="EMAIL"> </ion-input>
+                      </ion-item>
+                    <ion-item>
+                        <span  item-left><ion-icon name="ios-lock-outline"></ion-icon> </span>
+                    <ion-input  class="password"type="password" placeholder="PASSWORD"></ion-input>
+                  </ion-item>
+                  
+                  </div>
+                  <div padding text-center>
+                        <button  class="nxtstpbtn" color="light" ion-button block (click)="nextSlide()">NEXT STEP</button>
+                  </div> 
+    </ion-slide>
+
+    <ion-slide>
+            <div class="detailsholder" text-center padding>
+                    <h1>Full Name</h1>
+
+                    <ion-item>
+                    <span  item-left><ion-icon name="ios-person-outline"></ion-icon> </span>
+                    <ion-input class="username" placeholder="FULL NAME"> </ion-input>
+                  </ion-item>
+                  </div>
+                  <div padding text-center>
+                        <button  class="nxtstpbtn" color="light" ion-button block (click)="nextSlide()">NEXT STEP</button>
+                  </div> 
+    </ion-slide>
+    <ion-slide>
+            <div class="detailsholder" text-center padding>
+                    <h1>Date of Birth</h1>
+                    </div>
+            <ion-item class="DOB">
+                    <ion-label text-center>Select DOB</ion-label>
+                    <ion-datetime displayFormat="MMM DD, YYYY" [(ngModel)]="myDate"></ion-datetime>
+                  </ion-item>
+                  <div padding text-center>
+                        <button  class="nxtstpbtn" color="light" ion-button block (click)="nextSlide()">NEXT STEP</button>
+                  </div> 
+    </ion-slide>
+    <ion-slide>
+            <div class="detailsholder" text-center padding>
+                    <h1>Gender</h1>
+                    <ion-item>
+                            <ion-label>Select Gender</ion-label>
+                            <ion-select [(ngModel)]="gender">
+                              <ion-option value="f">Female</ion-option>
+                              <ion-option value="m">Male</ion-option>
+                            </ion-select>
+                          </ion-item>
+                    </div>
+                    <div padding text-center>
+                            <button  class="nxtstpbtn" color="light" ion-button block (click)="nextSlide()">NEXT STEP</button>
+                      </div> 
+    </ion-slide>
+    <ion-slide>
+            <div class="detailsholder" text-center padding>
+                    <h1>Weight</h1>
+                    <ion-item>
+                            <ion-label>Enter Weight</ion-label>
+                            <ion-input class="username" placeholder=""> </ion-input>
+                          </ion-item>
+                    <h1>Height</h1>
+                    <ion-item>
+                        <ion-label>Enter Height</ion-label>
+                        <ion-input class="username" placeholder=""> </ion-input>
+                    </ion-item>
+                    </div>
+                    <div padding text-center>
+                            <button  class="nxtstpbtn" color="light" ion-button block (click)="nextSlide()">NEXT STEP</button>
+                      </div>
+    </ion-slide>
+    <ion-slide>
+          <div text-center class="fillbanner">
+                <img class="animated bounce" src="./assets/imgs/iconOK.svg" alt="">
+               
+          </div>        
+          <div padding text-center>
+                <button  class="nxtstpbtn" color="light" ion-button block (click)="goPanel()">Go Panel</button>
+          </div>
+    </ion-slide>
+      </ion-slides>
+  </div>
+
+</ion-content>

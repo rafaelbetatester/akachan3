@@ -1,0 +1,102 @@
+page-today-activity {
+    ion-header{
+       .toolbar{
+        clip-path: none;
+        }
+    }
+    .your_data{
+        ion-col{
+            p{
+                color: color($colors,dark);
+                line-height: 22px;
+                span{
+                    display: block;
+                    color: color($colors,light);
+                }
+            }
+        }
+    }
+    .two_tabs{
+        .segment-ios{
+           .segment-button{
+               border-radius: 20px !important;
+               color:color($colors,light);
+               line-height: 33px; 
+           &:first-child{
+               margin-right: 5px;
+           }
+           &:last-child{
+               margin-left: 5px;
+           }
+           }
+        }
+        .your_data{
+            ion-col{
+                padding: 0 5px;
+                p{
+                    margin: 0;
+                    span{
+                    color: color($colors,thirdcolor);
+                    }
+                }
+            }
+        }
+        .qty{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 10px; 
+            .value{
+                min-width: 90px;
+                display: inline-block;
+                font-weight: 500;
+                font-size: 18px;
+            }
+            .op_btn{
+                width: 35px;
+                height: 35px;
+                border-radius: 50%;
+                margin: 0;
+            }
+        }
+    }
+}
+   
+/*round-progress*/  
+.progress_bar {
+    position: relative;
+    margin: 20px 0;
+    .current {
+        position: absolute;
+        img{
+            height: 40px;
+        }
+        p{
+            color: color($colors,thirdcolor);
+            font-size: 23px;
+            font-weight: 500;
+            margin-top: 8px;
+            line-height:21px;
+            span{
+                display: block;
+                color: color($colors,dark);
+                font-size: 14px;
+            }
+        }
+    }
+    round-progress{
+    display: inline-block;    
+    overflow: visible;
+    &:after{
+    content: '';
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    background:rgba(color($colors,primary),.4);
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    }    
+    }   
+}

@@ -1,0 +1,53 @@
+<ion-header>
+
+    <ion-navbar>
+        <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title>Blog</ion-title>
+        <ion-buttons end>  
+            <button ion-button icon-only (click)="searchInput=!searchInput">
+                <ion-icon name="search"></ion-icon>
+            </button> 
+        </ion-buttons>
+        <ion-searchbar *ngIf="searchInput" placeholder='' no-margin></ion-searchbar>
+    </ion-navbar>
+  
+</ion-header>
+
+
+<ion-content>
+  
+    <ion-card class="main_item" *ngFor="let item of blog" no-margin>
+
+        <img src="{{item.img}}" [navPush]="'DetailsPage'" >   
+
+        <ion-card-content>
+            <ion-card-title no-margin>Best Food To lose your weight</ion-card-title>
+            <p>Is simply dummy text of the printing and type setting industry.</p>
+        </ion-card-content>
+
+        <ion-row>
+            <ion-col text-left>
+                <button (click)="global.like(item)" ion-button icon-start clear small>
+                    <ion-icon *ngIf="!item.activeLike" color="thirdcolor" name="heart"></ion-icon>
+                    <ion-icon *ngIf="item.activeLike" color="danger" name="heart"></ion-icon>
+                    <div>12</div>
+                </button> 
+            </ion-col>
+            <ion-col text-center>
+                <button (click)="global.commentModal()" ion-button icon-start clear small>
+                    <ion-icon color="thirdcolor" name="text"></ion-icon>
+                    <div>150 Comments</div>
+                </button>
+            </ion-col>
+            <ion-col text-right>
+                <button (click)="global.sharePopover($event)" ion-button icon-start clear small>
+                    <ion-icon color="thirdcolor" name="share-alt"></ion-icon>
+                    <div>245</div>
+                </button>
+            </ion-col>
+        </ion-row>
+
+    </ion-card>
+</ion-content>

@@ -1,0 +1,68 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Comments</ion-title>
+    <ion-buttons end>
+        <button ion-button icon-only (click)="dismiss()">
+          <ion-icon name="md-close"></ion-icon>
+        </button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+   <ion-list  class="comments">
+      <div *ngFor="let item of comments">
+          <ion-item [hidden]="item.reply" no-lines>
+              <ion-avatar item-left>
+                  <img src="assets/img/default.png">
+              </ion-avatar>
+              <h2 no-margin>{{item.name}}<span>3 days ago</span></h2>
+              <p>{{item.comment}}</p>
+              <ion-row class="commentAction" text-center>
+                  <ion-col>
+                      <button ion-button icon-start clear small (click)="reply(item)">
+                        <ion-icon  color="primary" name="undo"></ion-icon>
+                        reply
+                      </button>
+                  </ion-col>
+                  <ion-col>
+                     <button ion-button icon-start clear small (click)="likeComment(item)">
+                        <ion-icon name="thumbs-up" color="primary" *ngIf="!item.likethis"></ion-icon>
+                        <ion-icon name="thumbs-up" color="thirdcolor" *ngIf="item.likethis"></ion-icon>
+                        {{item._likeValue}}
+                      </button>
+                  </ion-col>
+                  <ion-col>
+                      <button ion-button icon-start clear small (click)="dislikeComment(item)">
+                        <ion-icon name="thumbs-down"  color="primary"  *ngIf="!item.dislikethis"></ion-icon>
+                        <ion-icon name="thumbs-down"  color="thirdcolor" *ngIf="item.dislikethis"></ion-icon>
+                        {{item._dislikeValue}}
+                      </button>
+                   </ion-col>
+              </ion-row>
+          </ion-item>
+          <ion-item [hidden]="!item.reply" [ngClass]="{'reply': item.reply}" no-lines>
+              <ion-avatar item-start>
+              <img src="assets/img/default.png">
+              </ion-avatar>
+              <h2 no-margin>{{item.name}}<span>3 days ago</span></h2>
+              <p>{{item.comment}}</p>
+          </ion-item>
+      </div> 
+    </ion-list> 
+</ion-content>
+<ion-footer class="footer">
+    <ion-row padding>
+      <ion-col col-10 no-padding>
+              <ion-textarea rows="1" placeholder="write comment" [(ngModel)]="newcomment" #input></ion-textarea>
+      </ion-col>
+      <ion-col col-2 text-end no-padding>
+          <button ion-button icon-only clear>
+                <ion-icon color="thirdcolor" name="md-send"></ion-icon>
+          </button>
+      </ion-col>
+    </ion-row>
+</ion-footer>

@@ -1,0 +1,55 @@
+<!--
+  Generated template for the DrugdetailsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header no-border>
+
+  <ion-navbar>
+    <ion-title>drugdetails</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content >
+    <div>
+        <img src="./assets/imgs/navbar.svg" alt="">
+    </div>
+    <div class="icontent">
+        <ion-row>
+            <ion-item no-lines>
+                  <h1 color="primary" item-start>$29.00</h1>
+                  <img padding-horizontal  src="./assets/imgs/drug.png" alt="">
+                  <div class="drugq" item-end>
+                      <h1>Quantity</h1>
+                      <h2 text-center>1</h2>
+                      <div class="addicon" text-center>
+                        <button ion-button clear large>   <ion-icon name="add-circle"></ion-icon></button>
+                         
+                      </div>
+                      
+                  </div>
+                  
+            </ion-item>
+          </ion-row>
+          <div class="drugdetails">
+              <ion-card class="animated bounceInRight" padding>
+                <h2 padding-vertical>What is Amoxilin?</h2>
+                <p>
+                    Amoxicillin is a semi-synthetic penicillin of moderate spectrum used in the treatment of infections…
+                </p>
+              </ion-card>
+              <ion-card class="animated bounceInLeft" padding>
+                  <h2 padding-vertical>Important information</h2>
+                  <p>It acts on the bacterial membrane ...</p>
+                </ion-card>
+            </div>
+
+            <div padding-horizontal text-center>
+                <button  class="nxtstpbtn" ion-button block (click)="goCart()">Add to cart</button>
+          </div>
+    </div>
+
+</ion-content>

@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 123.017 263.936">
+  <defs>
+    <style>
+      .cls-1, .cls-3 {
+        fill: #2d8fff;
+      }
+
+      .cls-1 {
+        clip-rule: evenodd;
+      }
+
+      .cls-2 {
+        clip-path: url(#clip-path);
+      }
+
+      .cls-4 {
+        clip-path: url(#clip-path-2);
+      }
+    </style>
+    <clipPath id="clip-path">
+      <path id="Path_2" data-name="Path 2" class="cls-1" d="M65.464-239.176A27.966,27.966,0,0,0,93.4-267.109a27.965,27.965,0,0,0-27.937-27.934,27.961,27.961,0,0,0-27.931,27.934A27.961,27.961,0,0,0,65.464-239.176Z" transform="translate(-37.533 295.043)"/>
+    </clipPath>
+    <clipPath id="clip-path-2">
+      <path id="Path_4" data-name="Path 4" class="cls-1" d="M35.288-23.722a12.976,12.976,0,0,1-1.437-5.951l.106-161.233L25.874-140.38a13.049,13.049,0,0,1-12.825,10.765A13.064,13.064,0,0,1,0-142.664a11.563,11.563,0,0,1,.147-1.82,3.307,3.307,0,0,1-.087-1.6l3.323-17.63,9.5-50.4a13.134,13.134,0,0,1,.364-1.607A12.96,12.96,0,0,1,25.718-225H97.3a13.057,13.057,0,0,1,4.329.733,13,13,0,0,1,8.52,10.236l12.808,67.95a3.285,3.285,0,0,1-.089,1.6,11.61,11.61,0,0,1,.15,1.82A13.052,13.052,0,0,1,116.8-131.55a12.978,12.978,0,0,1-2.381,1.153,12.991,12.991,0,0,1-4.45.782,13.04,13.04,0,0,1-12.816-10.69L94.5-156.915l-3.287-20.545-2.151-13.447.017,26.791.061,94.21.006,10.2.02,30.033a12.969,12.969,0,0,1-1.438,5.952c-7.305-.315-15.213-.5-23.482-.537a12.953,12.953,0,0,1-1.177-5.413V-109.48H59.954v79.807a12.946,12.946,0,0,1-1.178,5.413C50.5-24.226,42.6-24.038,35.288-23.722Z" transform="translate(0 225.002)"/>
+    </clipPath>
+  </defs>
+  <g id="Group_7" data-name="Group 7" transform="translate(0 295.043)">
+    <g id="Group_4" data-name="Group 4" class="cls-2" transform="translate(33.576 -295.043)">
+      <g id="Group_3" data-name="Group 3" transform="matrix(-0.207, 0.978, -0.978, -0.207, 142.832, 11.283)">
+        <path id="Path_1" data-name="Path 1" class="cls-3" d="M25.434,174.928,0,54.57,258.233,0l25.434,120.359Z" transform="translate(0 0)"/>
+      </g>
+    </g>
+    <g id="Group_6" data-name="Group 6" class="cls-4" transform="translate(0 -232.387)">
+      <g id="Group_5" data-name="Group 5" transform="translate(176.407 -51.374) rotate(101.932)">
+        <path id="Path_3" data-name="Path 3" class="cls-3" d="M25.434,174.929,0,54.57,258.233,0l25.434,120.359Z" transform="translate(0 0)"/>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,75 @@
+page-start {
+    ion-header{
+        .toolbar{
+        clip-path: none;
+        }
+    }
+    .bar-button-menutoggle-ios{
+        display: block !important;
+    }
+    .scroll-content{
+        padding-bottom:20px !important;
+    }
+    .start_info{
+        h3{
+            margin:10px 0 5px 0 !important;
+            color: color($colors,dark);  
+        }
+        .app_form{
+            padding: 15px;
+            .item-ios{
+                [item-end] {
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+}
+
+.user_info{
+    min-height: 190px;
+    background: color($colors,primary);
+    color: color($colors,light);
+    text-align: center;
+    clip-path: ellipse(110% 100% at 50% 0px) !important;
+    padding: 10px;
+    .user_img{
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        background: color($colors,secondary);
+        position: relative;
+        display: inline-block;
+        img{
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        span{
+            width: 27px;
+            height: 27px;
+            line-height: 27px;
+            border-radius: 50%;
+            background: color($colors,light); 
+            color: color($colors,primary);  
+            display: inline-block;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            ion-icon{
+                line-height: inherit;
+                font-size: 23px;
+            }
+        }
+    }
+    .user_name{
+        width: 154px;
+        margin: 5px auto;
+        font-size: 15px;
+        .text-input[disabled] {
+            opacity: .7;
+        }
+    }
+}
+

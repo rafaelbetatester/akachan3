@@ -1,0 +1,53 @@
+<ion-header>
+
+  <ion-navbar hideBackButton>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Welcome</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+    <div class="user_info">
+       <div class="user_img">
+         <img src="{{img}}">
+         <span (click)="getPhoto()"><ion-icon name="ios-camera-outline"></ion-icon></span>
+       </div>
+       <ion-row class="user_name">
+            <ion-col col-10>
+                <ion-input type="text" value="Sam Vector" disabled="{{isDisabled}}" no-margin></ion-input>
+            </ion-col>
+            <ion-col col-2>
+                <ion-icon (click)="changeData()" name="md-create"></ion-icon>
+            </ion-col>
+        </ion-row>
+    </div>
+    <div class="start_info" padding>
+      <h3>Please Fill the following data</h3>
+
+      <div class="app_form">
+        <ion-list>
+
+          <ion-item no-lines> 
+             <ion-input type="number" placeholder="Age"></ion-input>
+          </ion-item>
+
+          <ion-item no-lines> 
+             <ion-input type="number" placeholder="Weight"></ion-input>
+             <span item-end>Kg</span>
+          </ion-item>
+
+          <ion-item no-lines> 
+             <ion-input type="number" placeholder="Height"></ion-input>
+             <span item-end>Cm</span>
+          </ion-item>
+
+        </ion-list>
+
+        <button [navPush]="'TodayActivityPage'"  ion-button block>Confirm</button>
+      </div>
+    </div>
+</ion-content>

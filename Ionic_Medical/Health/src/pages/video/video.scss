@@ -1,0 +1,19 @@
+page-video {
+    .scroll-content{
+        padding: 7px;
+    }
+    .vid_img{
+        position: relative;
+        height: 160px;
+        background: rgba(color($colors,dark),.2);
+        .play_icon{
+            position: absolute;
+            top: 55px;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            width: 49px;
+            height: 49px;
+        }
+    }
+}

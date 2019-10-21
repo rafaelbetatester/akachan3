@@ -1,0 +1,92 @@
+<ion-header>
+
+    <ion-navbar>
+    <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Setting</ion-title>
+    <ion-buttons end>  
+        <button ion-button icon-only (click)="searchInput=!searchInput">
+            <ion-icon name="search"></ion-icon>
+        </button> 
+    </ion-buttons>
+    <ion-searchbar *ngIf="searchInput" placeholder='' no-margin></ion-searchbar>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+      <div class="water_alarm" margin-bottom>
+        <ion-item  no-padding no-lines>
+            <ion-label>Water Alarm</ion-label>
+            <ion-toggle   [(ngModel)]="wateralarm" checked></ion-toggle>
+        </ion-item>
+        <ion-item class="alarm" *ngIf="wateralarm" no-lines>
+            <ion-label hidden>Water Alarm</ion-label>
+            <ion-select>
+                <ion-option selected>Every  1  hour</ion-option>
+                <ion-option>Every  30  Minutes</ion-option>
+                <ion-option>Every  15  Minutes</ion-option>
+                <ion-option>Every  10  Minutes</ion-option>
+            </ion-select>
+        </ion-item>
+      </div>
+      <div class="personal_info">
+        <h3>Set your Login information
+            <ion-icon class="edit_data" *ngIf="isDisabled" (click)="changeData()" name="md-create"></ion-icon>
+            <ion-icon class="save_btn" *ngIf="!isDisabled" (click)="changeData()" name="checkmark"></ion-icon>
+        </h3>
+        <ion-list>
+            <ion-item no-lines> 
+               <ion-icon color="thirdcolor" name="mail" item-start></ion-icon>
+               <ion-input type="email" placeholder="email" value="Lela@gmail.com" disabled="{{isDisabled}}"></ion-input>
+            </ion-item>
+            <ion-item no-lines> 
+               <ion-icon color="thirdcolor" name="person" item-start></ion-icon>
+               <ion-input type="text" placeholder="Username" value="Sam Vector" disabled="{{isDisabled}}"></ion-input>
+            </ion-item>
+            <ion-item no-lines> 
+               <ion-icon color="thirdcolor" name="lock" item-start></ion-icon> 
+               <ion-input type="password" placeholder="***********" value="12348hg*-r" disabled="{{isDisabled}}"></ion-input>
+            </ion-item>
+        </ion-list>
+      </div>
+      <div class="app_form">
+        <h3>Set your Fitness data</h3>
+        <ion-list>
+          <ion-item no-lines> 
+              <ion-input type="number" placeholder="Age"></ion-input>
+          </ion-item>
+          <ion-item no-lines> 
+              <ion-input type="number" placeholder="Weight"></ion-input>
+              <span item-end>Kg</span>
+          </ion-item>
+          <ion-item no-lines> 
+              <ion-input type="number" placeholder="Height"></ion-input>
+              <span item-end>Cm</span>
+          </ion-item>
+        </ion-list>
+      </div>
+      <div class="language">
+         <h3>App Language</h3> 
+         <ion-list  radio-group>
+            <ion-item no-lines>
+                <ion-label>English</ion-label>
+                <ion-radio checked="true" value="English"></ion-radio>
+            </ion-item>
+
+            <ion-item no-lines>
+                <ion-label>French</ion-label>
+                <ion-radio value="French"></ion-radio>
+            </ion-item> 
+         </ion-list>
+      </div>
+      <div class="animation">
+        <h3>Animation</h3> 
+        <ion-item no-lines>
+            <ion-label>Animation Availability</ion-label>
+            <ion-checkbox color="thirdcolor" (ionChange)="animateApp($event)"  checked="{{_myApp.animateVarible}}" item-end></ion-checkbox>
+        </ion-item>
+      </div>
+</ion-content>

@@ -1,0 +1,53 @@
+<ion-header>
+
+    <ion-navbar>
+        <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title>last activity</ion-title>
+        <ion-buttons end>  
+            <button ion-button icon-only (click)="searchInput=!searchInput">
+                <ion-icon name="search"></ion-icon>
+            </button> 
+        </ion-buttons>
+        <ion-searchbar *ngIf="searchInput" placeholder='' no-margin></ion-searchbar>
+    </ion-navbar>
+    <div class="calendar" text-center padding-top>
+        <div class="activity_date">
+            <span class="date">{{selecteddate}}</span>
+            <button (click)="openCalendar=!openCalendar" ion-button icon-only no-margin>
+            <ion-icon name="arrow-down"></ion-icon>
+            </button>
+        </div>
+        <ion-calendar [(ngModel)]="date"  *ngIf="openCalendar" (onChange)="onChange($event)" [type]="type" [format]="'YYYY-MM-DD'">
+        </ion-calendar>
+    </div>
+
+</ion-header>
+
+
+<ion-content padding>
+    <ion-list class="last_activity" no-margin>
+      <ion-item *ngFor="let item of items"  no-lines no-padding>
+        <span item-start text-center>
+          <img src="{{item.img}}">
+        </span>
+        <h2>{{item.title}}<span>{{item.date}}</span></h2>
+        <ion-row>
+            <ion-col col-4>
+                <p>  <ion-icon name="md-time"></ion-icon>47 Min</p>
+            </ion-col>
+            <ion-col col-4>
+                <p><ion-icon name="bonfire"></ion-icon>128 Cal</p>
+            </ion-col>
+            <ion-col col-4>
+                <p><ion-icon name="flag"></ion-icon>3.1 Mi</p>
+            </ion-col>
+        </ion-row>
+      </ion-item>
+    </ion-list>
+</ion-content>
+   
+<ion-footer>
+  <button [navPush]="'ActivityPage'" ion-button block no-margin>Start activities</button>
+</ion-footer>

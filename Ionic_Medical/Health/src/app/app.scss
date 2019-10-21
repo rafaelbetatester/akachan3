@@ -1,0 +1,138 @@
+// http://ionicframework.com/docs/theming/
+
+
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
+h3{
+    font-size: 1.7rem;
+}
+.white_cir{
+    content: '';
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: color($colors,light);
+    z-index: -1;
+    position: absolute;
+    top: 1px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+
+ion-header{
+    .toolbar{
+    -webkit-clip-path: ellipse(110% 100% at 50% 0px);
+    clip-path: ellipse(87% 100% at 50% 0px);
+    }
+    .toolbar-title-ios{
+        text-transform: capitalize;
+    }
+}
+/*back button*/
+.back-button.show-back-button {
+    width: 40px;
+    color: color($colors,primary);
+    position: relative;
+    ion-icon{
+        font-size: 2.2rem;
+        display: inline-block;
+    }
+    &:after{
+      @extend .white_cir;
+    }
+}
+.bar-button-ios[icon-only] {
+    font-size: 13px;
+    min-width: 35px;
+}
+.item-ios{
+  &.item-block{
+     padding: 0; 
+    .item-inner{
+        padding: 0;
+        .label-ios{
+           margin-right:0 !important;
+        }
+    }
+  }  
+}
+  
+/*menu button*/
+.bar-button-menutoggle-ios{
+    color: color($colors,primary);
+    position: relative;
+    &:after{
+        @extend .white_cir;
+    }
+    ion-icon {
+        font-size: 2.4rem;
+    }
+}
+
+/*menu*/
+.menu-inner {
+    width: 290px;
+    ion-header{
+    &:after{
+    display: none;
+    }
+    }
+    .toolbar-background-ios{
+        background: color($colors,thirdcolor);
+    }
+    .close_menu{
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background: color($colors,light);
+        margin: 6px;
+        ion-icon{
+            font-size: 18px;
+        }
+    }
+    .user_info{
+        min-height: auto;
+        background: color($colors,thirdcolor);
+        clip-path: none !important;
+    }
+    .content-ios{
+        background: color($colors,thirdcolor);
+        text-align: center;
+        .list-ios{
+            display: inline-block;
+            width: 238px;
+            .item-ios{
+            background: color($colors,secondary);
+            color: color($colors,dark);
+            width: 115px;
+            float: left;
+            padding: 0;
+            height: 100px;
+            margin: 2px;
+            font-size: 15px;
+                .item-inner{
+                    padding: 10px 5px;
+                    ion-label{
+                        ion-icon{
+                            display: block;
+                            margin-bottom: 10px;
+                            font-size: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

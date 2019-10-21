@@ -1,0 +1,25 @@
+page-list {
+  .scroll-content{
+      padding: 7px;
+  }
+}
+.main_item{
+    width: 100%;
+    img{
+        height: 160px;
+        object-fit: cover;
+    }
+    .card-content-ios{
+        padding: 5px 10px 0 10px;
+        .card-title-ios{
+            color: color($colors,thirdcolor);
+        }
+        p{
+            color: color($colors,dark);
+        }
+    }
+    .button-ios{
+        color: rgba(color($colors,dark),.5);
+        padding: 0 3px;
+    }
+}

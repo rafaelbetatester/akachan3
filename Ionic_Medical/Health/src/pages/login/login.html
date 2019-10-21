@@ -1,0 +1,40 @@
+<ion-content class="login_register">
+    <div class="logo">
+      <h3 text-center no-margin>Health & Fit</h3>
+    </div> 
+    <div class="app_form">
+        <ion-list>
+
+          <ion-item no-lines> 
+            <ion-icon name="md-person" item-start></ion-icon>
+            <ion-input type="text" placeholder="Username/Email"></ion-input>
+          </ion-item>
+
+          <ion-item no-lines> 
+            <ion-icon name="key" item-start></ion-icon>
+            <ion-input type="password" placeholder="Password"></ion-input>
+          </ion-item>
+
+        </ion-list>
+
+        <button [navPush]="'StartPage'"  ion-button block>Login</button>
+        <button class="for_psw" (click)="forgotPassword()" color="dark" ion-button small clear>Forgot password?</button>
+    </div>
+    <div class="social_icon">
+        <p text-center>Login with</p>
+        <ion-row padding-bottom>
+            <ion-col col-4>
+                <span><i class="app-facebook"></i></span>
+            </ion-col>
+            <ion-col col-4>
+                <span><i class="app-twitter"></i></span>
+            </ion-col>
+            <ion-col col-4>     
+                <span><i class="app-gplus"></i></span>
+            </ion-col>
+        </ion-row>
+    </div>
+
+    <button [navPush]="'RegisterPage'"  color="secondary"  ion-button block>Sign up</button>
+
+</ion-content>

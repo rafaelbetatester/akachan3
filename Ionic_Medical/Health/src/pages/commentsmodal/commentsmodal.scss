@@ -1,0 +1,36 @@
+page-commentsmodal {
+    .comments{
+        .item-ios{
+            border-top: 1px solid rgba(color($colors,dark),.2) !important;
+            .label-ios{
+            .commentAction{
+                .col{
+                padding: 0; 
+                    button{
+                    font-size: 13px; 
+                    margin: 0;
+                    text-transform: capitalize;
+                    color: rgba(color($colors,dark),.5);
+                    }
+                }
+            }
+          } 
+        }
+    }
+    .footer-ios{
+    background:color($colors,secondary);
+    &::before{
+      display: none;
+    }
+        textarea.text-input{
+            padding: 6px 15px;
+            margin: 0;
+            width: 100%;
+            background: color($colors,light);
+        }
+        .button[icon-only]{
+            margin: 0;
+            height: 29px;
+        }
+    }
+}

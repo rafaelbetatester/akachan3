@@ -1,0 +1,43 @@
+page-hospdetails {
+    .toolbar-background{
+        // position: relative;
+         background-image: url('../assets/imgs/splashbg.png') no-repeat transparent;
+       //  background-size: cover;
+       background-color: #2D8FFF;
+      }
+
+      .toolbar-title{
+        color: #ffff !important;
+    }
+
+    ion-item{
+            #ss{
+                width: 60px;
+                height: 60px;
+            }
+
+            #tt{
+                border-radius: 50%;
+            }
+       
+    }
+
+    .rateholder{
+        h4{
+            span{
+                color: #2D8FFF;
+            }
+        }
+    }
+
+    .nxtstpbtn{
+        border-radius: 25px;
+        color: rgb(255, 255, 255)!important;
+        font-size: 1.2em;
+    height: 40px;
+    background-color: #2D8FFF;
+
+    
+  }
+
+}

@@ -1,0 +1,55 @@
+page-favorite {
+    .scroll-content{
+        padding: 7px;
+    }
+    .segment-ios{
+        padding: 10px 15px !important;
+       .segment-button{
+        color:  color($colors,light); 
+        margin: 0 10px;
+        border-radius: 20px !important;   
+        &:first-of-type{
+        width: 32px;
+        max-width: 32px;
+        height: 32px;
+        line-height: 32px;
+        border-radius: 50% !important;   
+        } 
+       }
+    }
+    .item-ios{
+    padding: 0;
+        .item-inner{
+            .label-ios{
+                .delete_item{
+                    position: absolute;
+                    top: 20px;
+                    right: 20px;
+                    width: 33px;
+                    height: 33px;
+                    line-height: 33px;
+                    border-radius: 50%;
+                    font-size: 18px;
+                    background: color($colors,thirdcolor);
+                    display: inline-block;
+                    text-align: center;
+                    ion-icon{
+                       line-height: inherit;
+                    }
+                }
+                img{
+                    height: 120px;
+                    width: 100%;
+                    object-fit: cover;
+                }
+                .vid_img{
+                background: rgba(color($colors,dark),.2);
+                }
+                h3{
+                    margin: 10px 10px 0 10px;
+                    font-size: 1.7rem;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,75 @@
+<!--
+  Generated template for the PanelPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header no-border>
+
+  <ion-navbar>
+    <ion-title text-center>Akachan</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+    <div>
+        <img src="./assets/imgs/navbar.svg" alt="">
+    </div>
+    <div class="icontent">
+        <ion-grid class="catgrid animated zoomIn">
+            <ion-row class="cat-rows">
+                <ion-col class="cat-box"  (click)="goFindDoctor()">
+                    <div class="catimgholder" text-center>
+                        <img src="./assets/imgs/doctor.svg" alt="">
+                    </div>
+
+                    <p>Ask a Doctor</p>
+                  </ion-col>
+                  <ion-col class="cat-box"  (click)="goFindHospital()">
+                      <div class="catimgholder" text-center>
+                          <img src="./assets/imgs/hospital.svg" alt="">
+                      </div>
+
+                      <p >Find a Hospital</p>
+                    </ion-col>
+            </ion-row>
+
+            <ion-row class="cat-rows">
+                <ion-col class="cat-box"  (click)="goFindDrugs()">
+                    <div class="catimgholder" text-center>
+                        <img src="./assets/imgs/pills.svg" alt="">
+                    </div>
+
+                    <p>Medicines</p>
+                  </ion-col>
+                  <ion-col class="cat-box"  (click)="goPhones()">
+                      <div class="catimgholder" text-center>
+                          <img src="./assets/imgs/Schedule.svg" alt="">
+                      </div>
+
+                      <p >Schedule consultation</p>
+                    </ion-col>
+            </ion-row>
+
+            <ion-row class="cat-rows">
+                <ion-col class="cat-box"  (click)="goFindClinic()">
+                    <div class="catimgholder" text-center>
+                        <img src="./assets/imgs/smiling-baby.svg" alt="">
+                    </div>
+
+                    <p>Baby Info</p>
+                  </ion-col>
+                  <ion-col class="cat-box"  (click)="goPhones()">
+                      <div class="catimgholder" text-center>
+                          <img src="./assets/imgs/chemistry.svg" alt="">
+                      </div>
+
+                      <p >Health Indicators</p>
+                    </ion-col>
+            </ion-row>
+        </ion-grid>
+    </div>
+
+</ion-content>

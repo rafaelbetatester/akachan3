@@ -1,0 +1,121 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Today Activity</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+      <div class="user_info">
+          <div class="user_img">
+            <img src="assets/img/profile.png">
+          </div>
+          <p class="user_name">Sam Vector</p>
+           
+          <ion-row class="your_data">
+            <ion-col col-3>
+              <p><span>30</span>Age</p>
+            </ion-col>
+            <ion-col col-3>
+              <p><span>30</span>Bmi</p>
+            </ion-col>
+            <ion-col col-3>
+              <p><span>63</span>Weight</p>
+            </ion-col>
+            <ion-col col-3>
+              <p><span>163</span>Height</p>
+            </ion-col>
+          </ion-row>
+      </div>
+
+      <div class="two_tabs" padding>
+        <ion-segment [(ngModel)]="activity">
+          <ion-segment-button value="today">
+              Today Activity
+          </ion-segment-button>
+          <ion-segment-button value="water">
+              Water Calculator
+          </ion-segment-button>
+        </ion-segment>
+
+        <div [ngSwitch]="activity">
+          <div *ngSwitchCase="'today'" text-center>
+                <div class="progress_bar">
+                    <div class="current" [ngStyle]="global.getOverlayStyle()">
+                      <img src="assets/img/step.png">
+                      <p no-margin>{{ global.current }}<span>Steps</span></p>
+                    </div>
+                    <round-progress 
+                    [current]="global.current"
+                    [max]="global.max"
+                    [stroke]="global.stroke"
+                    [radius]="global.radius"
+                    [semicircle]="global.semicircle"
+                    [rounded]="global.rounded"
+                    [responsive]="global.responsive"
+                    [clockwise]="global.clockwise"
+                    [color]="global.gradient ? 'url(#global.gradient)' : global.color"
+                    [background]="global.background"
+                    [duration]="global.duration"
+                    [animation]="global.animation"
+                    [animationDelay]="global.animationDelay"></round-progress>
+                </div>
+                <ion-row class="your_data">
+                  <ion-col col-3>
+                     <p><span>30</span>Age</p>
+                  </ion-col>
+                  <ion-col col-3>
+                      <p><span>30</span>Bmi</p>
+                  </ion-col>
+                  <ion-col col-3>
+                      <p><span>63</span>Weight</p>
+                  </ion-col>
+                  <ion-col col-3>
+                      <p><span>163</span>Height</p>
+                  </ion-col>
+                </ion-row>
+
+          </div>
+          <div *ngSwitchCase="'water'" text-center>
+            <div class="progress_bar">
+                <div class="current" [ngStyle]="global.getOverlayStyle()">
+                  <img src="assets/img/water.png">
+                  <p no-margin>{{ global.sec_current }}<span>Glasses</span></p>
+                </div>
+                <round-progress 
+                [current]="global.sec_current"
+                [max]="global.sec_max"
+                [stroke]="global.stroke"
+                [radius]="global.radius"
+                [semicircle]="global.semicircle"
+                [rounded]="global.rounded"
+                [responsive]="global.responsive"
+                [clockwise]="global.clockwise"
+                [color]="global.gradient ? 'url(#global.gradient)' : global.color"
+                [background]="global.background"
+                [duration]="global.duration"
+                [animation]="global.animation"
+                [animationDelay]="global.animationDelay"></round-progress>
+            </div>
+            <div class="qty" text-center>
+              <button ion-button icon-only class="op_btn" color="thirdcolor" (click)="incrementQty()">
+                  <ion-icon name="add" color="light"></ion-icon>
+              </button>
+              <span class="value"> {{global.sec_current}}</span>
+              <button ion-button icon-only class="op_btn" color="thirdcolor" (click)="decrementQty()">
+                  <ion-icon name="remove" color="light"></ion-icon>
+              </button>
+            </div>
+          </div>
+       </div>
+     </div> 
+
+    
+
+</ion-content>

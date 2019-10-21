@@ -1,0 +1,50 @@
+page-drugdetails {
+    .toolbar-background{
+        // position: relative;
+         background-image: url('../assets/imgs/splashbg.png') no-repeat transparent;
+       //  background-size: cover;
+       background-color: #2D8FFF;
+      }
+
+      .toolbar-title{
+        color: #ffff !important;
+    }
+
+    ion-item{
+        #ss{
+            width: 60px;
+            height: 60px;
+        }
+
+        h1{
+            color: #2D8FFF;
+        }
+   
+}
+
+.drugq{
+    h1{
+        color: #2D8FFF;
+    }
+
+    h2{
+        color: #2D8FFF;
+    }
+}
+
+.drugdetails{
+    ion-card{
+        box-shadow: 0px 14px 36px rgba(52,153,246,0.29);
+    }
+}
+
+.nxtstpbtn{
+    border-radius: 25px;
+    color: rgb(255, 255, 255)!important;
+    font-size: 1.2em;
+height: 40px;
+background-color: #2D8FFF;
+
+
+}
+}

@@ -1,0 +1,67 @@
+.login_register{
+    .scroll-content{
+        padding:20px 25px !important;
+    }
+    .logo{
+        height: 100px;
+        color: color($colors,thirdcolor);
+        h3{
+        font-weight: normal;
+        padding-top: 40px;
+        font-size: 2.5rem;
+        }
+    }
+    .app_form{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        min-height: calc(100% - 276px);
+    }
+    .for_psw{
+        padding: 0;
+        margin: 0;
+        float: right;
+    }
+    .social_icon{
+        display: inline-block;
+        width: 100%;
+        p{
+            font-weight: 500;
+            font-size: 1.6rem;
+        }
+        ion-row{
+            text-align: center;
+            width: 200px;
+            margin: 0 auto;
+            span{
+                width: 50px;
+                height: 50px;
+                line-height: 50px;
+                border-radius: 50%;
+                font-size: 26px;
+                display: inline-block;
+                background:color($colors,primary);
+                color: color($colors,light); 
+            }
+        }
+    }
+}
+
+/*main form*/
+.app_form{
+    .list-ios{
+        margin-bottom: 10px;
+        .item-ios{
+            background: rgba(color($colors,primary),.4);
+            margin-bottom: 3px;
+            font-size: 1.4rem;
+            padding-left: 10px;
+            ion-icon{
+                color: color($colors,primary);
+                font-size: 2.3rem;
+                margin-right: 10px;
+            }
+        }
+    }  
+}

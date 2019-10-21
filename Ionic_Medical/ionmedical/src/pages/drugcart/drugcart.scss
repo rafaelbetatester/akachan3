@@ -1,0 +1,37 @@
+page-drugcart {
+    .toolbar-background{
+        // position: relative;
+         background-image: url('../assets/imgs/splashbg.png') no-repeat transparent;
+       //  background-size: cover;
+       background-color: #2D8FFF;
+      }
+
+      .toolbar-title{
+        color: #ffff !important;
+    }
+
+    ion-card{
+        
+    }
+
+    .itmcart{
+        border-radius: 16px;
+box-shadow: 0px 2px 25px rgba(17,152,229,0.16);
+        ion-item{
+            h2{
+                color: #2D8FFF;
+            }
+        }
+    }
+
+    .nxtstpbtn{
+        border-radius: 25px;
+        color: rgb(255, 255, 255)!important;
+        font-size: 1.2em;
+    height: 40px;
+    background-color: #2D8FFF;
+    
+    
+    }
+
+}

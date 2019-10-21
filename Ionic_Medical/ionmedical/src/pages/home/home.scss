@@ -1,0 +1,92 @@
+page-home {
+    .toolbar-background{
+        // background: linear-gradient(direction, #7DE9FF, #2DABFF) !important;
+        background-color: #64ACFF !important;
+     }
+.header-img{
+    width: 100%;
+    position: relative;
+    z-index: 1;
+}
+
+.icontent{
+    position: relative;
+    z-index: 2;
+    margin-top: -30vh;
+    text-align: center;
+
+}
+
+.detailsholder{
+    ion-item{
+        border-radius: 25px !important;
+        margin-left: -0.1rem;
+      padding-left: 30px !important;
+      font-size: 1.5em;
+      margin-bottom: 10px;
+      border-bottom: 0px !important;
+      box-shadow: none !important;
+      height: 20px;
+
+      ion-icon{
+          color: #95C6FF!important;
+      }
+    }
+    ion-input{
+        background-color: #ffffff;
+        width: 90vw;
+
+        margin: 10px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+
+
+         ::-webkit-input-placeholder {
+
+             text-align: center;
+             color: #95C6FF;
+
+          }
+
+          :-moz-placeholder { /* Firefox 18- */
+
+             text-align: center;
+
+          }
+
+          ::-moz-placeholder {  /* Firefox 19+ */
+
+             text-align: center;
+
+          }
+
+          :-ms-input-placeholder {
+
+             text-align: center;
+
+         }
+    }
+}
+
+.butnsholder{
+    .loginbtn{
+        border-radius: 25px;
+        color: #95C6FF!important;
+        font-size: 1.5em;
+    height: 50px;
+    margin-top:10vh;
+    background-color: #EDF5FF;
+
+    }
+
+    .fbloginbtn{
+        border-radius: 25px;
+        color: rgb(255, 255, 255)!important;
+        font-size: 1.5em;
+    height: 50px;
+    margin-top:10px;
+    background-color: #2D8FFF;
+
+    }
+}
+}
